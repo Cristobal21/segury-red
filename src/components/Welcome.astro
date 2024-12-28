@@ -4,6 +4,7 @@ import Clientes from "./Clientes.astro"
 import Sistemas from "./Sistemas.astro"
 import Contacto from "./Contacto.astro"
 import HeaderVertical from "./navigation/HeaderVertical.astro";
+import Footer from "./Footer.astro";
 ---
 
 <div id="container" class="bg-[#eee] h-full">
@@ -12,11 +13,16 @@ import HeaderVertical from "./navigation/HeaderVertical.astro";
 			<section class="w-80">
 				<HeaderVertical />
 			</section>
-			<section class="w-full">
-				<Servicios />
-				<Clientes />
-				<Sistemas />
-				<Contacto />
+			<section>
+				<section class="w-full">
+					<Servicios />
+					<Clientes />
+					<Sistemas />
+					<Contacto />
+				</section>
+				<section class="w-full">
+					<Footer />
+				</section>
 			</section>
 		</div>
 	</main>
