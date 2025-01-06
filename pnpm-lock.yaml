@@ -14,6 +14,9 @@ importers:
       astro:
         specifier: ^5.1.0
         version: 5.1.0(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
+      pnpm:
+        specifier: ^9.15.2
+        version: 9.15.2
       tailwindcss:
         specifier: ^3.4.17
         version: 3.4.17
@@ -1593,6 +1596,11 @@ packages:
 
   pkg-types@1.2.1:
     resolution: {integrity: sha512-sQoqa8alT3nHjGuTjuKgOnvjo4cljkufdtLMnO2LBP/wRwuDlo1tkaEdMxCRhyGRPacv/ztlZgDPm2b7FAmEvw==}
+
+  pnpm@9.15.2:
+    resolution: {integrity: sha512-k+V7ASbw33TOa/8paAOUwLpU7Ecka5zzIfASHY2bsD91CnBfJO3DwRgIU6/XwsO5QZbQo9U9PgadnieT7xHzIQ==}
+    engines: {node: '>=18.12'}
+    hasBin: true
 
   postcss-import@15.1.0:
     resolution: {integrity: sha512-hpr+J05B2FVYUAXHeK1YyI267J/dDDhMU6B6civm8hSY1jYJnBXxzKDKDswzJmtLHryrjhnDjqqp/49t8FALew==}
@@ -3799,6 +3807,8 @@ snapshots:
       confbox: 0.1.8
       mlly: 1.7.3
       pathe: 1.1.2
+
+  pnpm@9.15.2: {}
 
   postcss-import@15.1.0(postcss@8.4.49):
     dependencies:

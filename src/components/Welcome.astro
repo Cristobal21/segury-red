@@ -5,13 +5,15 @@ import Sistemas from "./Sistemas.astro"
 import Contacto from "./Contacto.astro"
 import HeaderVertical from "./navigation/HeaderVertical.astro";
 import Footer from "./Footer.astro";
+import Header from "./Header.astro";
 ---
 
 <div id="container" class="bg-[#eee] h-full">
 	<main>
-		<div class="flex">
-			<section class="w-80">
+		<div class="flex flex-col items-end">
+			<section class="w-1/6">
 				<HeaderVertical />
+				<!-- <Header /> -->
 			</section>
 			<section class="w-5/6">
 				<section class="w-full">
