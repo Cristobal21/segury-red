@@ -1,22 +1,23 @@
-<section class="w-1/6 h-full fixed border-none bg-black/70 left-0 top-0 bottom-0">
-    <div class="w-full py-6 flex justify-center items-center">
-        <nav>
+<section class="w-1/6 h-full fixed flex flex-col border-none bg-black/70 left-0 top-0 bottom-0">
+    <section class="w-full h-auto py-6 flex justify-center items-center">
+        <nav class="px-10">
             <a href="#top">
                 <img src="seguryred.webp" alt="Logo SeguryRED" class="rounded-full w-auto h-40">
             </a>
         </nav>
-    </div>
-    <nav>
-        <ul class="list-none flex flex-col items-center gap-y-8 pt-10 h-full [&>li>a]:rounded-full [&>li>a]:py-2 [&>li>]:py-2 [&>li>a]:px-6 [&>li]:px-6 [&>li>a]:w-36 [&>li>a]:transition-all [&>li>a]:text-white/85 [&>li>a]:text-2xl ">
-            <li><a href="#servicios" class=" active:scale-110 focus:text-xl hover:text-amber-500 hover:bg-white/10">Servicios</a></li>
-            <li><a href="#clientes" class=" active:scale-110 focus:text-xl hover:text-amber-500 hover:bg-white/10">Clientes</a></li>
-            <li><a href="#sistemas" class="border active:scale-110 focus:text-xl hover:text-amber-500 hover:bg-white/10">Sistemas</a></li>
-            <li><a href="#contacto" class="border active:scale-110 focus:text-xl hover:text-amber-500 hover:bg-white/10">Contacto</a></li>
+    </section>
+    <nav class="h-full">
+        <ul class="list-none flex flex-col items-center gap-y-8 pt-20 px-10 h-full [&>li>a]:rounded-full [&>li>a]:w-full [&>li>a]:py-2 [&>li>a]:px-9 [&>li>a]:transition-all [&>li>a]:text-white/85 [&>li>a]:text-2xl ">
+            <li class="w-full flex justify-center items-center"><a href="#servicios" class="flex justify-center active:text-amber-400 active:scale-110 focus:text-xl hover:text-amber-500 hover:bg-white/10">Servicios</a></li>
+            <li class="w-full flex justify-center items-center"><a href="#clientes" class="flex justify-center active:text-amber-400 active:scale-110 focus:text-xl hover:text-amber-500 hover:bg-white/10">Clientes</a></li>
+            <li class="w-full flex justify-center items-center"><a href="#contacto" class="flex justify-center active:text-amber-400 active:scale-110 focus:text-xl hover:text-amber-500 hover:bg-white/10">Contacto</a></li>
         </ul>
     </nav>
-    <section class="bottom-0 pt-32 px-14 [&>p]:text-white/85 [&>p]:text-md [&>p]:px-0 flex flex-col items-start justify-center gap-y-2">
-        <p>Copyright ©2024</p>
-        <p>seguryred.cl</p>
-        <p>Todos los derechos reservados.</p>
+    <section class="h-auto pb-10 px-10 top-0">
+        <ul class=" flex flex-col items-start justify-start gap-y-2 [&>li]:text-white/85 [&>li]:text-lg [&>li]:w-full ">
+            <li>Copyright ©2024</li>
+            <li><a href="#top">www.seguryred.cl</a></li>
+            <!-- <li>Todos los derechos reservados.</li> -->
+        </ul>
     </section>
 </section>
