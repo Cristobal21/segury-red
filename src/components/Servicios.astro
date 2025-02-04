@@ -1,5 +1,11 @@
-<div id="servicios" class="min-h-dvh flex justify-center items-center">
-    <section class="grid grid-cols-3 grid-flow-row gap-4">
+---
+// import { useState } from "react";
+// const [ visible, setVisible ] = useState(false)
+import {ButtonListServicios} from "./serviciosItems/ButtonListServicios.jsx"
+---
+
+<div id="servicios" class="min-h-dvh flex justify-center items-center ">
+    <section class="grid grid-cols-3 grid-flow-row gap-4 h-80 border border-black">
         <div class="flex justify-center items-center bg-black/20 h-20 w-96">
             <h2 class="text-2xl py-2 px-4">Instalación y conexión del ecosistema eléctrico</h2>
             <ul>
@@ -9,31 +15,35 @@
             </ul>
         </div>
 
-        <div class="[&>ul]:focus:block">
-            <button class="flex justify-center items-center bg-black/10 transition rounded-md hover:cursor-pointer hover:opacity-80 focus:scale-[1.01]">
+        <ButtonListServicios client:load />
+
+        <!-- <div class="">
+            <button onclick={() => setVisible(!visible)} class="flex justify-center items-center bg-black/10 transition rounded-md hover:cursor-pointer hover:opacity-80 focus:scale-[1.01]">
                 <h2 class="text-xl py-2 px-4 ">Instalación de equipo tecnológico y Soporte Computacional de Informática y Redes</h2>
                 <div class="flex place-content-center px-4">
                     <img src="/src/assets/arrow-down.svg" alt="logo svg de flecha direción abajo" class="h-10 w-10 font-semibold">
                 </div>
             </button>
-            <ul class="w-full list-disc ml-6 hidden">
-                <li class="">Instalación de equipo computacional acorde a la necesidad.
-                    <ul class="ml-6 list-disc">
-                        <li class="text-sm">Formateo de computadores, software ofimática y configuración inicial</li>
-                        <li class="text-sm">Instalación de Impresoras</li>
-                        <li class="text-sm">Instalación impresora térmica y lector de código</li>
-                    </ul>
-                </li>
-                <li class="list-disc">Planificación e Instalación de equipos de red de empresa.
-                    <ul class="list-disc ml-6">
-                        <li class="text-sm">Proyección de Plano de Red</li>
-                        <li class="text-sm"></li>
-                        <li class="text-sm"></li>
-                    </ul>
-                </li>
-                <li class="list-disc"></li>
-            </ul>
-        </div>
+            {visible && (
+                <ul class="w-full list-disc ml-6">
+                    <li class="">Instalación de equipo computacional acorde a la necesidad.
+                        <ul class="ml-6 list-disc">
+                            <li class="text-sm">Formateo de computadores, software ofimática y configuración inicial</li>
+                            <li class="text-sm">Instalación de Impresoras</li>
+                            <li class="text-sm">Instalación impresora térmica y lector de código</li>
+                        </ul>
+                    </li>
+                    <li class="list-disc">Planificación e Instalación de equipos de red de empresa.
+                        <ul class="list-disc ml-6">
+                            <li class="text-sm">Proyección de Plano de Red</li>
+                            <li class="text-sm"></li>
+                            <li class="text-sm"></li>
+                        </ul>
+                    </li>
+                    <li class="list-disc"></li>
+                </ul>
+            )}
+        </div> -->
 
         <div>
             <h2 class="text-2xl py-2 px-4">Instalación y Monitoreo de sistemas de Cyberseguridad y Televigilancia</h2>
