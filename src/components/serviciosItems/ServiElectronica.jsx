@@ -2,7 +2,7 @@ import { useState } from "react";
 import "animate.css"
 
 // export function ButtonListServicios() {
-export const ServiComputacion = () => {
+export const ServiElectronica = () => {
 
     const [ visible, setVisible ] = useState(false)
     const [ invisible, setInvisible ] = useState(false)
@@ -14,7 +14,7 @@ export const ServiComputacion = () => {
                     setVisible(!visible)
                     setInvisible(!invisible)
                 }} className="flex justify-center items-center bg-black/10 transition shadow-md rounded-md hover:cursor-pointer hover:opacity-80 focus:scale-[1.02]">
-                    <h2 className="text-xl py-2 px-4 ">Instalación de equipo tecnológico y Soporte Computacional de Informática y Redes</h2>
+                    <h2 className="text-xl py-2 px-4 ">src/components/serviciosItems/ServiComputacion.jsx</h2>
                     <div className="flex place-content-center px-4">
                         <img src="/src/assets/arrow-down.svg" alt="logo svg de flecha direción abajo" className="h-10 w-10 font-semibold"/>
                     </div>
