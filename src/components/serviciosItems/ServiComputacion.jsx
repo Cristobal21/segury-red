@@ -13,10 +13,10 @@ export const ServiComputacion = () => {
                 <button onClick={() => {
                     setVisible(!visible)
                     setInvisible(!invisible)
-                }} className="flex justify-center items-center bg-black/10 transition shadow-md rounded-md hover:cursor-pointer hover:opacity-80 focus:scale-[1.02]">
-                    <h2 className="text-xl py-2 px-4 ">Instalación de equipo tecnológico y Soporte Computacional de Informática y Redes</h2>
+                }} className="h-24 flex justify-center items-center bg-black/10 transition shadow-md rounded-md hover:cursor-pointer hover:opacity-80 focus:scale-[1.02]">
+                    <h2 className="text-xl py-2 px-4 ">Instalación de equipo tecnológico y Soporte Computacional</h2>
                     <div className="flex place-content-center px-4">
-                        <img src="/src/assets/arrow-down.svg" alt="logo svg de flecha direción abajo" className="h-10 w-10 font-semibold"/>
+                        <img src="/src/assets/arrow-down.svg" alt="logo svg de flecha direción abajo" className="h-8 w-auto"/>
                     </div>
                 </button>
             )}

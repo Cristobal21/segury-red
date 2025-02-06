@@ -9,19 +9,19 @@ export const ServiElectronica = () => {
 
     return (
         <div className="flex flex-col items-center justify-center w-full">
-            {!invisible && (
+            {/* {!invisible && ( */}
                 <button onClick={() => {
                     setVisible(!visible)
                     setInvisible(!invisible)
-                }} className="flex justify-center items-center bg-black/10 transition shadow-md rounded-md hover:cursor-pointer hover:opacity-80 focus:scale-[1.02]">
-                    <h2 className="text-xl py-2 px-4 "></h2>
+                }} className="h-24 flex justify-center items-center bg-black/10 transition shadow-md rounded-md hover:cursor-pointer hover:opacity-80 focus:scale-[1.02]">
+                    <h2 className="text-xl py-2 px-4">Instalación de ecosistema de red eléctrico</h2>
                     <div className="flex place-content-center px-4">
-                        <img src="/src/assets/arrow-down.svg" alt="logo svg de flecha direción abajo" className="h-10 w-10 font-semibold"/>
+                        <img src="/src/assets/arrow-down.svg" alt="logo svg de flecha direción abajo" className="h-8 w-auto"/>
                     </div>
                 </button>
-            )}
+            {/* )} */}
             {visible && (
-                <ul className="w-full list-disc pt-10 px-10 animate__animated animate__flipInY h-auto duration-75  p-4 bg-white/80 shadow-lg rounded-md">
+                <ul className="w-full list-disc pt-10 px-10 animate__animated animate__fadeIn h-auto duration-75  p-4 bg-white/80 shadow-lg rounded-md">
                     <li className="">Instalación de equipo computacional acorde a la necesidad.
                         <ul className="ml-6 list-disc">
                             <li className="text-sm">Formateo de computadores, software ofimática y configuración inicial</li>

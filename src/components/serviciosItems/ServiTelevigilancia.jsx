@@ -13,7 +13,7 @@ export const ServiTelevigilancia = () => {
                 <button onClick={() => {
                     setVisible(!visible)
                     setInvisible(!invisible)
-                }} className="flex justify-center items-center bg-black/10 transition shadow-md rounded-md hover:cursor-pointer hover:opacity-80 focus:scale-[1.02]">
+                }} className="h-24 flex justify-center items-center bg-black/10 transition shadow-md rounded-md hover:cursor-pointer hover:opacity-80 focus:scale-[1.02]">
                     <h2 className="text-xl py-2 px-4 ">Instalación y Monitoreo de sistemas de Cyberseguridad y Televigilancia</h2>
                     <div className="flex place-content-center px-4">
                         <img src="/src/assets/arrow-down.svg" alt="logo svg de flecha direción abajo" className="h-10 w-10 font-semibold"/>
