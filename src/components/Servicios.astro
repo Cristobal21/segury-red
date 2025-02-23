@@ -1,9 +1,17 @@
 ---
 import CardServiElect from "./seviciosItems/CardServiElect.astro";
 import CardServiRed from "./seviciosItems/CardServiRed.astro";
-import CardServiInfor from "./seviciosItems/CardServiInfor.astro";
+import CardServiCompu from "./seviciosItems/CardServiCompu.astro";
 
-const serviElect = ["Planificación y Diseño de Sistema Eléctrico", "Instalación de la Infraestructura Eléctrica", "Instalación de Equipos Eléctricos", "Pruebas y Verificaciones", "Cumplimiento de Normativas y Seguridad", "Documentación y Capacitación", "Entrega y Aprobación"];
+const serviElect = [
+  "Planificación y Diseño de Sistema Eléctrico", 
+  "Instalación de la Infraestructura Eléctrica", 
+  "Instalación de Equipos Eléctricos", 
+  "Pruebas y Verificaciones", 
+  "Cumplimiento de Normativas y Seguridad", 
+  "Documentación y Capacitación", 
+  "Entrega y Aprobación"
+]
 const serviRed = [
   "Planificación y Diseño de la Red",
   "Adquisición de Equipos y Materiales",
@@ -14,7 +22,7 @@ const serviRed = [
   "Documentación",
   "Mantenimiento y Monitoreo"
 ]
-const serviInfor = [
+const serviCompu = [
   "Planificación y Diseño",
   "Instalación de Hardware",
   "Instalación de Software",
@@ -30,7 +38,8 @@ const serviInfor = [
 <div id="servicios" class="min-h-dvh flex justify-center items-center ">
     <section class="grid grid-cols-2 grid-rows-2 w-full h-screen">
         <CardServiElect serviElect={serviElect} title="Instalación Sistema Eléctrico" alt="Icon electricidad" path="/src/assets/bolt-outline.svg" />
-        <CardServiRed serviRed={serviRed} title="Instalación Sistema de Red" alt="Icon red" path="/src/assets/network.svg" />
-        <CardServiInfor serviInfor={serviInfor} title="Instalación Sistema Informático" alt="Icon informatica" path="/src/assets/computer.svg" />
+        <CardServiRed serviRed={serviRed} title="Instalación Sistema de Redes" alt="Icon red" path="/src/assets/network.svg" />
+        <CardServiCompu serviCompu={serviCompu} title="Instalación Sistema Informático" alt="Icon informatica" path="/src/assets/computer.svg" />
+        <CardServiCompu serviCompu={serviCompu} title="Instalación Sistema Informático" alt="Icon informatica" path="/src/assets/computer.svg" />
     </section>
 </div>

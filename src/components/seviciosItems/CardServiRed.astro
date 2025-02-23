@@ -3,22 +3,27 @@ interface Service {
     service: string;
 }
 
-const { serviRed, title, path, alt } = Astro.props
+const { serviRed, title, path, alt } = Astro.props;
 ---
 
 <div class="w-full h-full p-3 flex justify-center items-center">
-    <div class="bg-[#273136] text-white shadow-2xl transition-all rounded-lg max-h-96 h-full w-full">
-        <h1 class="text-4xl font-bold text-white pt-4 pb-2 flex justify-center gap-x-2">
+    <div class="bg-[#eee] hover:scale-[1.02] hover:bg-[#273136] hover:text-white hover:shadow-xl hover:shadow-black/65 hover:rounded-lg transition-all hover:transition-all hover:duration-500 duration-500 max-h-96 w-full h-full [&>h1]:hover:text-white">
+        <h1 class="text-4xl font-bold text-slate-700 pt-4 pb-2 flex justify-center gap-x-2">
             <!-- <img src="/src/assets/red.svg" alt="Logo sistema red"> -->
             {title}
         </h1>
-        <ul class="[&>li]:flex [&>li]:justify-start [&>li]:gap-x-2 [&>li]:px-4 [&>li]:w-full py-4 px-10 w-full space-y-2 text-md flex flex-col place-content-center overflow-ellipsis overflow-hidden whitespace-nowrap">
-            {serviRed.map((service: Service) => (
-                <li>
-                    <img src={path} alt={alt} >
-                    {service}
-                </li>
-            ))}
+        <ul class="[&>div>img]:hover:stroke-white [&>div>img]:hover:text-white [&>div>img]:hover:fill-white py-4 px-10 w-full space-y-2 text-md flex justify-center overflow-ellipsis overflow-hidden whitespace-nowrap">
+            <div class="[&>li]:flex [&>li]:justify-start [&>li]:gap-x-1 [&>li]:w-full [&>pi]:px-1 [&>li]:list-disc w-full">
+                {serviRed.map((service: Service) => (
+                    <li class="list-disc">
+                        {/* <img src={path} alt={alt} > */}
+                        {service}
+                    </li>
+                ))}
+            </div>
+            <div class="group">
+                <img src="/src/assets/red.svg" alt="Icon de Redes" class="h-full w-56 transition-all"/>
+            </div>
         </ul>
     </div>
 </div>

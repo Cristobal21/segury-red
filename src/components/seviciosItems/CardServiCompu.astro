@@ -3,7 +3,7 @@ interface Service {
     service: string;
 }
 
-const { serviElect, title, path, alt } = Astro.props;
+const { serviCompu, title, path, alt } = Astro.props;
 ---
 
 <div class="w-full h-full p-3 flex justify-center items-center">
@@ -14,7 +14,7 @@ const { serviElect, title, path, alt } = Astro.props;
         </h1>
         <ul class="[&>div>img]:hover:stroke-white [&>div>img]:hover:text-white [&>div>img]:hover:fill-white py-4 px-10 w-full space-y-2 text-md flex justify-center overflow-ellipsis overflow-hidden whitespace-nowrap">
             <div class="[&>li]:flex [&>li]:justify-start [&>li]:gap-x-1 [&>li]:w-full [&>pi]:px-1 [&>li]:list-disc w-full">
-                {serviElect.map((service: Service) => (
+                {serviCompu.map((service: Service) => (
                     <li class="list-disc">
                         {/* <img src={path} alt={alt} > */}
                         {service}
@@ -22,7 +22,7 @@ const { serviElect, title, path, alt } = Astro.props;
                 ))}
             </div>
             <div class="group">
-                <img src="/src/assets/bolt-outline.svg" alt="Icon de Electricidad" class="h-full w-56 transition-all"/>
+                <img src="/src/assets/desktop.svg" alt="Icon de computadora" class="h-full w-56 transition-all"/>
             </div>
         </ul>
     </div>
