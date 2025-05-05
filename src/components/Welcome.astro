@@ -1,15 +1,23 @@
 ---
-import Servicios from "./Servicios.astro"
-import Clientes from "./Clientes.astro"
-import Contacto from "./Contacto.astro"
-import HeaderVertical from "../components/navigation/HeaderVertical.astro"
-// import HeaderVertical from "./navigation/HeaderVertical.astro"
-import Footer from "./Footer.astro";
+// import Servicios from "./Servicios.astro"
+// import Clientes from "./Clientes.astro"
+// import Contacto from "./Contacto.astro"
+// import HeaderVertical from "../components/navigation/HeaderVertical.astro"
+// import Footer from "./Footer.astro";
 ---
 
-<div id="container">
-	<main>
-		<div class="flex flex-col items-end">
+<div id="container" class="h-screen">
+	<main class="h-full">
+		<section class="flex flex-col items-center h-full bg-orange-100 gap-y-10">
+			<div class="flex flex-col items-center justify-end w-full h-full">
+				<h1 class="font-bold text-center w-full text-6xl">SEGURYRED</h1>
+				<p class="w-full text-center text-2xl">Estamos actualizando nuestra página web</p>
+			</div>
+			<div class="h-full w-full flex justify-center items-start">
+				<img src="/icons/settings.svg" alt="Icono de engranaje" class="w-32 h-auto hover:animate-spin" />
+			</div>
+		</section>
+		<!-- <div class="flex flex-col items-end">
 			<section class="w-1/6">
 				<HeaderVertical />
 			</section>
@@ -23,6 +31,6 @@ import Footer from "./Footer.astro";
 					<Footer />
 				</section>
 			</section>
-		</div>
+		</div> -->
 	</main>
 </div>
