@@ -1,48 +1,69 @@
-<div class="bg-white w-full h-full bottom-0 flex flex-col">
-    <section class="flex">
-        <section class="flex flex-col py-10 pl-10 w-full">
-            <div class="flex gap-x-2 justify-start items-center pb-5">
-                <a href="#top">
-                    <img src="seguryred.webp" alt="Logo SeguryRED" class="w-auto h-8">
-                </a>
-                <h class="text-slate-900 font-semibold text-xl">SEGURYRED</h2>
-            </div>
-            <p class="text-md text-slate-400 font-normal hover:text-slate-500">Sistemas de Televigilancia para empresas, campos, predios, etc.</p>
-        </section>
-        <section class="flex flex-col p-10 border-r border-l w-full">
-            <h2 class="text-slate-900 font-semibold text-xl pb-5">
-                <div class="flex justify-start items-center gap-x-2 w-full">
-                    <img src="/menu.svg" alt="Icon de Menú de Navegación" class="w-6 h-6">
-                    Menú Principal
-                </div>
-            </h2>
-            <a class="text-md text-slate-400 font-normal hover:text-slate-500" href="#servicios">Servicios</a>
-            <a class="text-md text-slate-400 font-normal hover:text-slate-500" href="#clientes">Clientes</a>
-            <a class="text-md text-slate-400 font-normal hover:text-slate-500" href="#contacto">Contacto</a>
-        </section>
-        <section class="flex flex-col p-10 border-r w-full">
-            <h2 class="text-slate-900 font-semibold text-xl pb-5">
-                <div class="flex justify-start items-center gap-x-2 w-full">
-                    <img src="/info-outline.svg" alt="Icon de Información" class="w-6 h-6">
-                    Información
-                </div>
-            </h2>
-            <a class="text-md text-slate-400 font-normal hover:text-slate-500" href="#">Política de Privacidad</a>
-            <a class="text-md text-slate-400 font-normal hover:text-slate-500" href="#">Términos y Condiciones</a>
-        </section>
-        <section class="flex flex-col p-10 w-full">
-            <h2 class="text-slate-900 font-semibold text-xl pb-5">
-                <div class="flex justify-start items-center gap-x-2 w-full">
-                    <img src="/phone-outline.svg" alt="Icon de teléfono" class="w-6 h-6">
-                    Contacto
-                </div>
-            </h2>
-            <p class="text-md text-slate-400 font-normal">Av. Juan Roman Hoppe #52, Buin</p>
-            <p class="text-md text-slate-400 font-normal"><b class="font-medium">Teléfono:</b> +569 9276 0697</p>
-        </section>
+<div class="bottom-0 flex h-full w-full flex-col bg-white">
+  <section class={`
+    flex flex-col h-screen items-center justify-center py-10
+    lg:flex lg:flex-row lg:h-full lg:py-0 lg:justify-center lg:items-start
+    md:grid md:grid-cols-2 md:grid-flow-rows md:items-center md:[&>section]:h-full
+  `}>
+    <section class="flex w-full flex-col py-10 pl-10">
+      <div class="flex items-center justify-start gap-x-2 pb-5">
+        <a href="#top">
+          <img src="seguryred.webp" alt="Logo SeguryRED" class="h-8 w-auto" />
+        </a>
+        <h class="text-xl font-semibold text-slate-900">SEGURYRED</h>
+      </div>
+      <p class="text-md font-normal mr-10 md:mr-10 text-slate-400">
+        Sistemas de Televigilancia para empresas, campos, predios, etc.
+      </p>
     </section>
-    <section class="flex justify-between items-center bg-white h-10 w-full py-2 [&>p]:text-black/85 [&>p]:text-sm [&>p]:px-10">
-        <p class="text-black/85 text-sm ">Copyright ©2025. Todos los derechos reservados.</p>
-        <p>Desarrollado por <a href="#">CAVC</a></p>
+    <section class="flex w-full flex-col lg:border-l lg:border-r p-10">
+      <h2 class="pb-5 text-xl font-semibold text-slate-900">
+        <div class="flex w-full items-center justify-start gap-x-2">
+          <img src="/icons/menu.svg" alt="Icon de Menú de Navegación" class="h-6 w-6" />
+          Menú Principal
+        </div>
+      </h2>
+      <nav class="flex flex-col justify-center">
+        <a class="text-md font-normal text-slate-400 hover:text-slate-500" href="#servicios"
+          >Servicios</a
+        >
+        <a class="text-md font-normal text-slate-400 hover:text-slate-500" href="#clientes"
+          >Clientes</a
+        >
+        <a class="text-md font-normal text-slate-400 hover:text-slate-500" href="#galeria">Galería</a
+        >
+        <a class="text-md font-normal text-slate-400 hover:text-slate-500" href="#contacto"
+          >Contacto</a
+        >
+      </nav>
     </section>
+    <section class="flex w-full flex-col lg:border-r p-10">
+      <h2 class="pb-5 text-xl font-semibold text-slate-900">
+        <div class="flex w-full items-center justify-start gap-x-2">
+          <img src="/icons/info-outline.svg" alt="Icon de Información" class="h-6 w-6" />
+          Información
+        </div>
+      </h2>
+      <a class="text-md font-normal text-slate-400 hover:text-slate-500" href="/politica-de-privacidad" target="_blank" rel="noopener noreferrer">
+        Política de Privacidad
+      </a>
+    </section>
+    <section class="flex w-full flex-col p-10">
+      <h2 class="pb-5 text-xl font-semibold text-slate-900">
+        <div class="flex w-full items-center justify-start gap-x-2">
+          <img src="/icons/phone-outline.svg" alt="Icon de teléfono" class="h-6 w-6" />
+          Contacto
+        </div>
+      </h2>
+      <p class="text-md font-normal text-slate-400">Av. Juan Roman Hoppe #52, Buin</p>
+      <p class="text-md font-normal text-slate-400">
+        <b class="font-medium">Teléfono:</b> +569 9276 0697
+      </p>
+    </section>
+  </section>
+  <section
+    class="flex flex-col lg:flex-row lg:h-8 h-40 w-full lg:w-full items-center justify-center lg:justify-between bg-white [&>p]:px-10 [&>p]:text-black/85"
+  >
+    <p class="text-sm text-black/85 lg:w-full">Copyright ©2025. Todos los derechos reservados.</p>
+    <p class="text-xs w-full text-center py-2 lg:w-full lg:text-end">Desarrollado por <a href="https://www.linkedin.com/in/crist%C3%B3bal-andr%C3%A9-valderrama-contreras-176275100/" target="_blank">CAVC</a></p>
+  </section>
 </div>

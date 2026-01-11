@@ -1,0 +1,74 @@
+---
+
+import Layout from "../../layouts/Layout.astro"
+
+const title = "Clientes – SeguryRed"
+const description =
+  "Conoce las empresas y organizaciones que confían en SeguryRed para sus proyectos eléctricos, de seguridad y redes. Experiencia y resultados comprobados en Chile."
+
+import CardLogo from './CardLogo.astro'
+
+// importa todos los logos
+import logoMiavet from '../../assets/logos/logo_miavet.webp'
+import logoAmbulancia from '../../assets/logos/logo_ambulancia.avif'
+import logoBarrere from '../../assets/logos/logo_barrere.avif'
+import logoBj from '../../assets/logos/logo_bj.webp'
+import logoGasbarrera from '../../assets/logos/logo_gasbarrera.avif'
+import logoSeguridadMaipo from '../../assets/logos/logo_seguridadmaipo.avif'
+
+// define la lista de clientes
+const clientes = [
+  { src: logoMiavet, alt: 'Miavet' },
+  { src: logoAmbulancia, alt: 'Ambulancias EMR' },
+  { src: logoBarrere, alt: 'Groupe Barrere.' },
+  { src: logoBj, alt: 'Pet BJ pasión por las mascotas' },
+  { src: logoGasbarrera, alt: 'Gas Barrera desde 1950' },
+  { src: logoSeguridadMaipo, alt: 'Seguridad Maipo' },
+]
+
+// define lista de clientes sin logo
+const clientesLI = [
+  'Transporte Privado Turismo González',
+  'Agrícola Santa Laura Limitada.',
+  'Plantamericana',
+  'Comercial Agrícola Raimundo Ltda.',
+  'Transportes Jorge Pizarro',
+  'Ferretería Colonia Kennedy',
+  'Viña Huelquén',
+  'Sociedad Agrícola y Avícola Felmer Ltda.'
+]
+
+---
+<Layout {title} {description}>
+  <div id="clientes" class="flex min-h-dvh items-center justify-center">
+    <section class="mx-10 flex flex-col h-full w-full items-center justify-center">
+      <h2 class="text-4xl font-semibold text-slate-700 w-full text-center py-10">
+        Conoce algunos de nuestros clientes
+      </h2>
+      <div
+        class={`
+              grid grid-cols-2 grid-flow-row place-items-center w-full gap-y-6 gap-x-4 items-center h-full
+              lg:grid-cols-3
+          `}
+      >
+        {clientes.map(({ src, alt }) => <CardLogo src={src} alt={alt} />)}
+      </div>
+      <div class="h-full w-full rounded-3xl py-2 my-10">
+        <h2 class="mb-2 w-full rounded-lg p-4 text-2xl font-semibold text-slate-700">
+          Otros Clientes
+        </h2>
+        <div
+          class={`
+                  grid lg:grid-cols-4 grid-cols-1 md:grid-cols-2 grid-flow-row list-disc list-inside text-lg gap-y-2 gap-x-10 rounded-lg py-4 px-6 h-full w-full bg-black/20 shadow-lg
+                  [&>p]:text-gray-700 [&>p]:hover:text-gray-900 [&>p]:transition-colors [&>p]:bg-white [&>p]:rounded
+              `}
+        >
+          {clientesLI.map((cliente) => 
+          <p
+            class="lg:py-2 px-4 shadow scale-105 my-2 lg:w-44 w-full lg:text-sm text-md text-start break-words overflow-hidden place-self-center lg:h-14 h-16 flex items-center jsutify-center lg:text-center"
+          >{cliente}</p>)}
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://seguryred.cl/sitemap-index.xml

@@ -1,44 +1,86 @@
 ---
-import CardServiElect from "./seviciosItems/CardServiElect.astro";
-import CardServiRed from "./seviciosItems/CardServiRed.astro";
-import CardServiCompu from "./seviciosItems/CardServiCompu.astro";
+
+import Layout from "../layouts/Layout.astro"
+
+const title = "Servicios – SeguryRed"
+
+const description =
+  "Ofrecemos instalación eléctrica, cableado estructurado, CCTV, redes y soporte técnico profesional. Servicios integrales para hogares y empresas en Chile."
+
+import CardServices from "./seviciosItems/CardServices.astro"
 
 const serviElect = [
-  "Planificación y Diseño de Sistema Eléctrico", 
-  "Instalación de la Infraestructura Eléctrica", 
-  "Instalación de Equipos Eléctricos", 
-  "Pruebas y Verificaciones", 
-  "Cumplimiento de Normativas y Seguridad", 
-  "Documentación y Capacitación", 
-  "Entrega y Aprobación"
+  'Planificación y Diseño de Sistema Eléctrico',
+  'Instalación de la Infraestructura Eléctrica',
+  'Instalación de Equipos Eléctricos',
+  'Pruebas y Verificaciones',
+  'Cumplimiento de Normativas y Seguridad',
+  'Documentación y Capacitación',
+  'Entrega y Aprobación',
 ]
 const serviRed = [
-  "Planificación y Diseño de la Red",
-  "Adquisición de Equipos y Materiales",
-  "Instalación de Cableado y Hardware",
-  "Configuración de Dispositivos de Red",
-  "Configuración de los Dispositivos de Usuario",
-  "Pruebas de la Red",
-  "Documentación",
-  "Mantenimiento y Monitoreo"
+  'Planificación y Diseño de la Red',
+  'Adquisición de Equipos y Materiales',
+  'Instalación de Cableado y Hardware',
+  'Configuración de Dispositivos de Red',
+  'Configuración de los Dispositivos de Usuario',
+  'Pruebas de la Red',
+  'Documentación',
+  'Mantenimiento y Monitoreo',
 ]
 const serviCompu = [
-  "Planificación y Diseño",
-  "Instalación de Hardware",
-  "Instalación de Software",
-  "Configuración de la Red y Servidores",
-  "Configuración de Dispositivos de Usuario",
-  "Pruebas de Funcionamiento",
-  "Documentación",
-  "Capacitación",
-  "Mantenimiento y Soporte Continuo",
+  'Planificación y Diseño',
+  'Instalación de Hardware',
+  'Instalación de Software',
+  'Configuración de la Red y Servidores',
+  'Configuración de Dispositivos de Usuario',
+  'Pruebas de Funcionamiento',
+  'Documentación',
+  'Capacitación',
+  'Mantenimiento y Soporte Continuo',
 ]
----
+const serviSecury = [
+  'Evaluación de Riesgos',
+  'Planificación y Diseño del Sistema',
+  'Instalación de Equipos de Seguridad',
+  'Configuración y Pruebas del Sistema',
+  'Pruebas y Verificación',
+  'Capacitación del Personal',
+  'Mantenimiento y Soporte Continuo',
+]
 
-<div id="servicios" class="min-h-dvh flex justify-center items-center ">
-    <section class="grid grid-cols-2 grid-rows-2 w-full h-screen">
-        <CardServiElect serviElect={serviElect} title="Instalación Sistema Eléctrico" alt="Icon de electricidad" path="/bolt-outline.svg" />
-        <CardServiRed serviRed={serviRed} title="Instalación Sistema de Redes" alt="Icon de redes" path="/red.svg" />
-        <CardServiCompu serviCompu={serviCompu} title="Instalación Sistema Informático" alt="Icon de informatica" path="/computer.svg" />
+---
+<Layout {title} {description}>
+
+  <div id="servicios" class="flex min-h-dvh items-center justify-center">
+    <section class={`
+      h-auto w-full grid grid-cols-1 grid-flow-rows mx-10 place-items-center
+      lg:grid-cols-2 lg:grid-flow-row lg:mx-10 lg:gap-4 lg:place-items-center
+    `}>
+      <CardServices
+        services={serviRed}
+        title="Instalación Sistema de Redes"
+        alt="Icon de redes"
+        path="/icons/red.svg"
+      />
+      <CardServices
+        services={serviCompu}
+        title="Instalación Sistema Informático"
+        alt="Icon de informatica"
+        path="/icons/computer.svg"
+      />
+      <CardServices
+        services={serviSecury}
+        title="Instalación Sistema de Seguridad"
+        alt="Icon de Seguridad"
+        path="/icons/secury.svg"
+      />
+      <CardServices 
+        services={serviElect}
+        title="Instalación Sistema Eléctrico"
+        alt="Icon de electricidad"
+        path="/icons/bolt-outline.svg"
+      />
     </section>
-</div>
+  </div>
+</Layout>

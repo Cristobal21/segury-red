@@ -19,6 +19,10 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+__MACOSX
 
 # jetbrains setting folder
 .idea/
+
+# cpanel files
+/private/

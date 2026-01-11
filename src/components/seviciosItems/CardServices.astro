@@ -1,0 +1,41 @@
+---
+interface Service {
+  service: string
+}
+
+const { services, title, path, alt } = Astro.props
+---
+
+<div class={`
+  my-6 px-10 w-full border border-black/5 shadow-md rounded-xl transition-all duration-500 bg-[#273136] text-white
+  lg:flex lg:h-full lg:w-full lg:hover:scale-[1.02] lg:border-none lg:items-center lg:justify-center lg:px-0 lg:shadow-none lg:bg-transparent lg:hover:bg-[#273136]
+  hover:rounded-lg hover:bg-[#273136] hover:shadow-xl hover:shadow-black/65 hover:transition-all hover:duration-500
+`}>
+  <div
+    class={`
+      lg:h-[22rem] lg:w-[44rem] lg:bg-transparent
+      [&>div>h2]:hover:text-white [&>ul]:hover:text-white
+    `}
+  >
+    <div class="flex justify-between items-center">
+      <h2 class="flex justify-center px-10 pb-2 pt-4 lg:text-3xl text-2xl font-bold text-white lg:text-slate-700">
+        {title}
+      </h2>
+    </div>
+    <ul
+      class={`
+        text-lg sm:text-white flex w-full justify-between space-y-2 overflow-hidden overflow-ellipsis whitespace-nowrap px-10 py-4 [&>div>img]:hover:fill-white [&>div>img]:hover:stroke-white [&>div>img]:hover:text-white
+        lg:text-slate-600 lg:hover:text-white
+      `}
+    >
+      <div
+        class="w-full [&>li]:flex [&>li]:w-full [&>li]:list-disc [&>li]:justify-start [&>li]:gap-x-1 [&>pi]:px-1"
+      >
+        {services.map((service: Service) => <li class="list-disc">{service}</li>)}
+      </div>
+      <div class="group">
+        <img src={path} alt={alt} class="lg:h-full lg:w-56 lg:flex w-auto h-24 transition-all" />
+      </div>
+    </ul>
+  </div>
+</div>

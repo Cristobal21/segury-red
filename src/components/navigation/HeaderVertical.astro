@@ -1,34 +1,78 @@
-<section class="w-1/6 h-full fixed flex flex-col border-none bg-[#273136] left-0 top-0 bottom-0">
-    <section class="w-full h-auto py-6 flex justify-center items-center">
-        <nav class="px-10">
-            <a href="#top">
-                <img src="seguryred.webp" alt="Logo SeguryRED" class="rounded-full w-auto h-40">
-            </a>
-        </nav>
-    </section>
-    <nav class="h-full flex place-content-center">
-        <ul class="w-44 flex flex-col items-start gap-y-8 pt-20 h-full [&>li>a]:w-full [&>li>a]:py-2 [&>li>a]:transition-all [&>li>a]:text-white/85 [&>li>a]:text-2xl ">
-            <li class="w-full rounded-full flex justify-between items-center [&>img]:hover:h-auto [&>a>img]:hover:block hover:bg-white/10 active:bg-orange-400 active:duration-75 duration-300 transition-all">
-                <a href="#servicios" class="ml-4 flex justify-between items-center">Servicios
-                    <img src="/arrowRight.svg" alt="Logo flecha derecha" class="text-white mx-4">
-                </a>
-            </li>
-            <li class="w-full rounded-full flex justify-between items-center [&>img]:hover:h-auto [&>a>img]:hover:block hover:bg-white/10 active:bg-orange-400 active:duration-75 duration-300 transition-all">
-                <a href="#clientes" class="ml-4 flex justify-between items-center">Clientes
-                    <img src="/arrowRight.svg" alt="Logo flecha derecha" class="text-white mx-4">
-                </a>
-            </li>
-            <li class="w-full rounded-full flex justify-between items-center [&>img]:hover:h-auto [&>a>img]:hover:block hover:bg-white/10 active:bg-orange-400 active:duration-75 duration-300 transition-all">
-                <a href="#contacto" class="ml-4 flex justify-between items-center">Contacto
-                    <img src="/arrowRight.svg" alt="Logo flecha derecha" class="text-white mx-4">
-                </a>
-            </li>
-        </ul>
+<section class={`
+  top-0 w-full flex items-center h-auto
+  lg:fixed lg:bottom-0 lg:left-0 lg:top-0 lg:flex lg:h-full lg:w-1/6 lg:flex-col border-none bg-[#273136] 
+`}>
+  <section class={`
+    flex items-center py-4
+    lg:flex lg:h-auto lg:w-full lg:items-center lg:justify-center lg:py-6
+  `}>
+    <nav class="px-10">
+      <a href="#top">
+        <img src="seguryred.webp" alt="Logo SeguryRED" class={`h-28 rounded-full lg:h-40 w-auto lg:rounded-full`}/>
+      </a>
     </nav>
-    <section class="h-auto pb-10 px-10 top-0 flex place-content-center">
-        <ul class=" flex flex-col items-start justify-start gap-y-2 [&>li]:text-white/85 [&>li]:text-lg [&>li]:w-full ">
-            <li>Copyright ©2025</li>
-            <li><a href="#top">www.seguryred.cl</a></li>
-        </ul>
-    </section>
+    <div class="flex flex-col">
+      <h2 class={`
+        text-white text-2xl font-bold py-1
+        lg:hidden
+      `}>
+        SeguryRed
+      </h2>
+      <h3 class="text-slate-200 py-1 font-semibold text-lg lg:hidden">
+        Soluciones Tecnológicas
+      </h3>
+    </div>
+  </section>
+  <nav class={`
+    hidden
+    lg:flex lg:h-full lg:place-content-center
+  `}>
+    <ul
+      class="flex h-full w-44 flex-col items-start gap-y-8 pt-20 [&>li>a]:w-full [&>li>a]:py-2 [&>li>a]:text-2xl [&>li>a]:text-white/85 [&>li>a]:transition-all"
+    >
+      <li
+        class="flex w-full items-center justify-between rounded-full transition-all duration-300 hover:bg-white/10 active:bg-orange-400 active:duration-75 [&>a>img]:hover:block [&>img]:hover:h-auto"
+      >
+        <a href="#servicios" class="ml-4 flex items-center justify-between"
+          >Servicios
+          <img src="icons/arrowRight.svg" alt="Logo flecha derecha" class="mx-4 text-white" />
+        </a>
+      </li>
+      <li
+        class="flex w-full items-center justify-between rounded-full transition-all duration-300 hover:bg-white/10 active:bg-orange-400 active:duration-75 [&>a>img]:hover:block [&>img]:hover:h-auto"
+      >
+        <a href="#clientes" class="ml-4 flex items-center justify-between"
+          >Clientes
+          <img src="/icons/arrowRight.svg" alt="Logo flecha derecha" class="mx-4 text-white" />
+        </a>
+      </li>
+      <li
+        class="flex w-full items-center justify-between rounded-full transition-all duration-300 hover:bg-white/10 active:bg-orange-400 active:duration-75 [&>a>img]:hover:block [&>img]:hover:h-auto"
+      >
+        <a href="#proyectos" class="ml-4 flex items-center justify-between"
+          >Proyectos
+          <img src="/icons/arrowRight.svg" alt="Logo flecha derecha" class="mx-4 text-white" />
+        </a>
+      </li>
+      <li
+        class="flex w-full items-center justify-between rounded-full transition-all duration-300 hover:bg-white/10 active:bg-orange-400 active:duration-75 [&>a>img]:hover:block [&>img]:hover:h-auto"
+      >
+        <a href="#contacto" class="ml-4 flex items-center justify-between"
+          >Contacto
+          <img src="/icons/arrowRight.svg" alt="Logo flecha derecha" class="mx-4 text-white" />
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section class={`
+    hidden  
+    lg:top-0 lg:flex lg:h-auto lg:place-content-center lg:px-10 lg:pb-10
+  `}>
+    <ul
+      class="flex flex-col items-start justify-start gap-y-2 [&>li]:w-full [&>li]:text-lg [&>li]:text-white/85"
+    >
+      <li>Copyright ©2025</li>
+      <li><a href="#top">www.seguryred.cl</a></li>
+    </ul>
+  </section>
 </section>

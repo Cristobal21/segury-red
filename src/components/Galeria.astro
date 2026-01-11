@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const title = "Proyectos – SeguryRed";
+const description =
+  "Explora proyectos eléctricos, de redes y sistemas de seguridad realizados por SeguryRed en empresas y hogares de Chile. Conoce la calidad de nuestras instalaciones.";
+
+
+import 'glightbox/dist/css/glightbox.min.css'
+
+const imagenes = [
+  { src: '/galeria/img1.avif', alt: 'Instalación eléctrica' },
+  { src: '/galeria/img2.avif', alt: 'Instalación eléctrica' },
+  { src: '/galeria/img3.avif', alt: 'Instalación eléctrica' },
+  { src: '/galeria/img4.avif', alt: 'Instalación eléctrica' },
+  { src: '/galeria/img5.avif', alt: 'Instalación eléctrica' },
+  { src: '/galeria/img6.avif', alt: 'Instalación eléctrica' },
+  { src: '/galeria/img7.avif', alt: 'Instalación y Revisión CCTV' },
+  { src: '/galeria/img9.avif', alt: 'Instalación de Red y Servidores' },
+  { src: '/galeria/img10.avif', alt: 'Instalación y Corroboración eléctrica' },
+  { src: '/galeria/img11.avif', alt: 'Instalación y Corroboración eléctrica' },
+  { src: '/galeria/img12.avif', alt: 'Instalación y Corroboración eléctrica' },
+  { src: '/galeria/img13.avif', alt: 'Instalación y Corroboración eléctrica' },
+  { src: '/galeria/img15.avif', alt: 'Instalación y Corroboración eléctrica' },
+  { src: '/galeria/img16.avif', alt: 'Instalación y Corroboración eléctrica' },
+  { src: '/galeria/img17.avif', alt: 'Instalación y Corroboración eléctrica' },
+  { src: '/galeria/img19.avif', alt: 'Instalación de cámaras' },
+  { src: '/galeria/img20.avif', alt: 'Instalación de cámaras' },
+  { src: '/galeria/img21.avif', alt: 'Instalación de cámaras' },
+  { src: '/galeria/img22.avif', alt: 'Instalación y Corroboración eléctrica' },
+  { src: '/galeria/img23.avif', alt: 'Mantenimiento cámaras y electricidad' },
+  { src: '/galeria/img24.avif', alt: 'Mantenimiento cámaras y electricidad' },
+  { src: '/galeria/img25.avif', alt: 'Mantenimiento cámaras y electricidad' },
+  { src: '/galeria/img26.avif', alt: 'Correcta instalación de seguridad eléctrica' },
+  { src: '/galeria/img27.avif', alt: 'Correcta instalación de seguridad eléctrica' },
+  { src: '/galeria/img28.avif', alt: 'Corroboración y verificación de instalación' },
+  { src: '/galeria/img29.avif', alt: 'Corroboración y verificación de instalación' },
+  { src: '/galeria/img30.avif', alt: 'Corroboración y verificación de instalación' },
+  { src: '/galeria/img31.avif', alt: 'Corroboración y verificación de instalación' },
+]
+---
+
+<Layout {title} {description}>
+  <div id="proyectos" class="min-h-dvh w-full">
+    <h2 class="text-4xl font-semibold text-slate-700 w-full text-center py-10 px-10">
+      Aprecia algunos de nuestros proyectos y servicios más recientes.
+    </h2>
+    <div class="mx-10 columns-1 gap-4 sm:columns-2 md:columns-3">
+      {
+        imagenes.map(({ src, alt }) => (
+          <a
+            href={src}
+            class="group mb-4 block overflow-hidden rounded-xl shadow-md transition-shadow duration-300 hover:shadow-xl"
+            data-gallery="seguryred-gallery"
+            aria-label={`Ver imagen en tamaño completo: ${alt}`}
+            rel="noopener noreferrer"
+          >
+            <img
+              src={src}
+              alt={alt}
+              loading="lazy"
+              decoding="async"
+              class="aspect-auto h-auto w-full rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+            />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
+
+

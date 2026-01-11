@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets'
+
+const { src, alt } = Astro.props
+---
+
+<div
+  class={`
+        bg-white w-full lg:h-56 rounded-3xl shadow-xl flex flex-col items-center justify-center
+    `}
+>
+  <Image
+    src={src}
+    alt={alt}
+    class="lg:h-52 lg:w-52 h-44 w-48 rounded-full transition-all duration-500 hover:scale-[1.03] hover:transition-all hover:duration-700 bg-transparent"
+  />
+</div>
